@@ -19,7 +19,7 @@ all: $(TARGET)
 
 # Link
 $(TARGET): $(SRCS)
-	@if not exist $(BINDIR) mkdir $(BINDIR)
+	@mkdir -p $(BINDIR)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 # Clean
